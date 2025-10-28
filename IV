@@ -1,0 +1,10 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+abass=pd.read_csv('/content/accident.csv')
+x=pd.DataFrame(data['Age'])
+y=pd.DataFrame(data['Speed_of_Impact'])
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=1)
+print(X_train.shape)
+print(X_test.shape)
+print(y_train.shape)
+print(y_test.shape)
