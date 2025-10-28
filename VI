@@ -1,0 +1,14 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+wainaina = pd.read_csv('/content/accident.csv')
+X = wainaina[['Age']]
+y = wainaina['Speed_of_Impact']
+regressor = LinearRegression()
+regressor.fit(X, y)
+wainaina.plot(x='Age', y='Speed_of_Impact', style='o', label='Data Points')
+plt.plot(X, regressor.predict(X), color='red', linewidth=2, label='Regression Line')
+plt.xlabel('LSTAT')
+plt.ylabel('MEDV')
+plt.legend()
+plt.show()
