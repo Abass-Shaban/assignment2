@@ -1,0 +1,5 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+abass=pd.read_csv('/content/accident.csv')
+x=pd.DataFrame(data['Age'])
+y=pd.DataFrame(data['Speed_of_Impact'])
