@@ -1,0 +1,9 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+abass=pd.read_csv('/content/accident.csv')
+data=abass.loc[:,['Age','Speed_of_Impact']]
+abass.head(10)
+abass.plot(x='Age',y='Speed_of_Impact',style='o')
+plt.xlabel('Age')
+plt.ylabel('Speed_of_Impact')
+plt.show()
